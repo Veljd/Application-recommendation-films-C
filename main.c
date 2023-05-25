@@ -4,9 +4,9 @@
 #include "film.h"
 
 int main() {
-  struct Film films[MAX_FILMS];
-  int nbFilms = 0;
-  int choix;
+  struct Film films[MAX_FILMS]; // Tableau pour stocker les films
+  int nbFilms = 0; // Nombre de films actuellement dans le tableau
+  int choix; // Variable pour stocker le choix de l'utilisateur
 
   do {
     printf("----- Menu -----\n");
@@ -19,17 +19,17 @@ int main() {
 
     switch (choix) {
     case 1:
-      ajouterFilm(films,nbFilms);
+      ajouterFilm(films,nbFilms); // Appel de la fonction pour ajouter un film au tableau
       break;
 
     case 2:
       printf("----- Liste des films -----\n");
-      afficherFilms(films);
+      afficherFilms(films); // Appel de la fonction pour afficher tous les films du tableau
       break;
 
     case 3:
       printf("Sauvegarde des films...\n");
-      sauvegarderFilms(films);
+      sauvegarderFilms(films); // Appel de la fonction pour sauvegarder les films dans un fichier CSV
       printf("Les films ont été sauvegardés dans le fichier 'films.csv'.\n");
       break;
 
@@ -47,4 +47,3 @@ int main() {
 
   return 0;
 }
-
