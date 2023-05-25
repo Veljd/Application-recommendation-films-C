@@ -8,17 +8,17 @@ void sauvegarderFilm(struct Film film, FILE *fichier) {
 }
 
 // Sauvegarde tous les films non vides dans un fichier CSV
-void sauvegarderFilms(struct Film *films) {
+void sauvegarderFilms(struct Film *films,int nbFilms) {
   FILE *fichier = fopen("films.csv", "w");
   if (fichier == NULL) {
     printf("Erreur lors de l'ouverture du fichier.\n");
     return;
   }
 
-  int i = 0;
-  while (films[i].annee != -1) {
-    sauvegarderFilm(films[i], fichier);
-    i++;
+
+  while (nbFilms > 0) {
+    sauvegarderFilm(films[nbFilms], fichier);
+    nbFilms--;
   }
 
   fclose(fichier);
