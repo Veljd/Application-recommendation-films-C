@@ -23,7 +23,7 @@ struct Film {
 void sauvegarderFilm(struct Film film, FILE *fichier);
 
 // Sauvegarde tous les films dans un fichier CSV
-void sauvegarderFilms(struct Film *films);
+void sauvegarderFilms(struct Film *films,int nbFilms);
 
 // Affiche les détails d'un film
 void afficherFilm(struct Film film);
