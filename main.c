@@ -29,7 +29,7 @@ int main() {
 
     case 3:
       printf("Sauvegarde des films...\n");
-      sauvegarderFilms(films); // Appel de la fonction pour sauvegarder les films dans un fichier CSV
+      sauvegarderFilms(films,nbFilms); // Appel de la fonction pour sauvegarder les films dans un fichier CSV
       printf("Les films ont été sauvegardés dans le fichier 'films.csv'.\n");
       break;
 
