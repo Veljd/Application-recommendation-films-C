@@ -37,6 +37,7 @@ void afficherFilms(struct Film *films) {
   }
 }
 
+// Fonction pour ajouter un film au tableau de films
 void ajouterFilm(struct Film *films, int nbFilms) {
   if (nbFilms >= MAX_FILMS) {
     printf("Le tableau de films est plein.\n");
@@ -56,7 +57,7 @@ void ajouterFilm(struct Film *films, int nbFilms) {
   scanf(" %[^\n]", nouveauFilm.genre);
 
   films[nbFilms] = nouveauFilm;
-  (nbFilms)++;
+  nbFilms++; // Ajoute le film à la fin du tableau en incrémentant le nombre de films
 
   printf("Le film a été ajouté avec succès.\n");
 }
