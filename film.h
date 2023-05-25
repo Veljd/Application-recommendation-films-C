@@ -6,9 +6,9 @@
 #include <string.h>
 
 #define MAX_FILMS 10
-#define MAX_TITRE 10
-#define MAX_REALISATEUR 10
-#define MAX_GENRE 10
+#define MAX_TITRE 100
+#define MAX_REALISATEUR 100
+#define MAX_GENRE 100
 
 struct Film {
   char titre[MAX_TITRE];
